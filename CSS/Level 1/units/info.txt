@@ -1,0 +1,3 @@
+Units measured by pixels
+96px=1 inch
+1inch=2.5rem

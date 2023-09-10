@@ -1,0 +1,14 @@
+
+h1 {
+    color: rgb(32, 218, 79);
+    background-color: black;
+}
+
+p {
+    color: rgba(10, 52, 220, 0.589);
+    background-color: azure;
+}
+
+button {
+    background-color: rgb(255, 0, 0);
+}

@@ -1,0 +1,8 @@
+html{
+    cursor: none;
+}
+.Curser{
+    position: absolute;
+    background-color: rgb(210, 203, 203);
+    mix-blend-mode: difference;
+}

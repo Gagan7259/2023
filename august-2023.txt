@@ -1,0 +1,54 @@
+-----------CSS 2023 AUGUST PRACTISE-----------------
+-> castcading style sheet 
+-> its used for styling the document
+
+Basic syntax
+    color      :blue
+     |           |
+     property    Value
+
+TYPES OF CSS 
+
+1.INLINE CSS
+
+      <h2 style="color: aqua;">Hey Banglore</h2>
+
+2.internal Css
+    
+<style>
+        h2{
+            background-color: rgb(103, 128, 128);
+            font-weight: 800;
+            color: black;
+        }
+    </style>
+
+
+3.extenal Css
+    creating separete file for css then describe the property and values then linking with html
+
+         <link rel="stylesheet" href="1.css">
+
+
+
+--------Background color------------
+  
+     RGB(0,0,0)=>> Red Green Blue  {0-255 range}
+
+
+     HEXA Decimal 
+                 ex:#fff23
+
+
+16Digits of code
+ 0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+
+
+--------------------SELECTORS----------------------------
+
+        1.UNIVERSAL SELECTOR
+        2.ELEMENT SELECTOR
+        3.ID SELECTOR
+        4.CLASS SELECTOR
+

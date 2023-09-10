@@ -1,0 +1,29 @@
+#h1 {
+    font-weight: normal;
+}
+
+#h2 {
+    font-weight: bold
+}
+
+#h3 {
+    font-weight: lighter;
+}
+
+#h4 {
+    font-weight: bolder;
+}
+
+#one {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-size: small;
+    font-weight: bolder;
+}
+
+#two {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 800;
+    font-style: inherit;
+    color: brown;
+}

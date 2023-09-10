@@ -1,0 +1,17 @@
+#one{
+    font-size: 20px;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+#t{
+    font-size: 30px;
+    line-height: 20px;
+    text-transform: lowercase;
+
+}
+#g{
+    font-size: 50px;
+    line-height: normal;
+    text-transform: capitalize;
+
+}
