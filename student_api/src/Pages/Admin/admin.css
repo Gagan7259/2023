@@ -1,0 +1,36 @@
+* {
+    border: 0;
+    padding: 0;
+    height: auto;
+}
+.head_admin {
+
+    background: linear-gradient(lightyellow, lightblue, lightpink);
+}
+.head {
+    margin: 8px 0px 0px 275px;
+    font-style: italic;
+    color: black;
+}
+.menu {
+    margin-top: 20px;
+    width: 40rem;
+    margin-left: 90px;
+    height: 24rem;
+    border: 10px;
+    border-radius: 10px;
+    /*     background: linear-gradient(lightblue, lightpink, lightblue);
+ */
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.btnt {
+    background-color: yellowgreen;
+    width: 60%;
+    margin-left: 90px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: italic;
+}
