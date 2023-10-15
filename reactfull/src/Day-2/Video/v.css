@@ -1,0 +1,22 @@
+.container{
+    margin: 0;
+    padding: 0;
+    background: #898989;}
+.anna{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    margin-left: 80px;
+    color: blue;
+    transform: matrix3d(67deg);
+    cursor: pointer;
+
+}
+
+.image{
+width: 20%;
+border-radius: 50%;
+margin-top: 5px;
+margin-left: 70px;
+
+}
+
