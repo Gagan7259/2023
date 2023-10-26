@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  <center>
+        <button onclick="
+            console.log(` CartQuantity Total:${CartQuantity}`)
+            ">CartQuantity</button>
+        <button onclick="
+     if(CartQuantity>10){
+                alert(`Your Cart Items Are Maxed`)
+    }else{
+        CartQuantity=CartQuantity+2
+        console.log(CartQuantity)
+    }
+
+        
+        ">Update</button>
+    </center> -->
+    <div style="display: flex; background: repeating-radial-gradient(lightpink,lightblue) ;">
+        <center>
+            <button onclick="
+            console.log(` CartQuantity Total:${CartQuantity}`)
+            ">CartQuantity</button>
+            <button onclick="
+     if(CartQuantity+3>10){
+        alert(`Your Cart Items Are Maxed`)
+    
+    }else{
+        CartQuantity=CartQuantity+3
+        console.log(CartQuantity) 
+    }  
+        ">Update</button>
+        </center>
+    </div>
+    <div>
+        <center>
+            <button onclick=" console.log(` CartQuantity Total:${CartQuantity}`) ">CartQuantity-1</button>
+            <button onclick=" if(CartQuantity+2>10){
+        alert(`Your Cart Items Are Maxed`)
+
+        }else{
+        CartQuantity=CartQuantity+2
+        console.log(CartQuantity)
+        }
+        ">+2</button>
+        </center>
+    </div>
+
+
+    <div>
+        <center>
+            <button onclick=" console.log(` CartQuantity Total:${CartQuantity}`) ">CartQuantity-1</button>
+            <button onclick=" 
+            CartQuantity=0;
+            console.log(`Cart Reseted`)
+            console.log(`Cartquantity iS ${CartQuantity}`)
+        ">remove cart</button>
+        </center>
+    </div>
+    <script>
+        let CartQuantity = 0; 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Using Paer rock scossors</title>
+</head>
+
+<body>
+    <center>
+        <div>
+            <button onclick="
+            let result=''
+                PickComputermove1()
+      if(compueterPick==='Rock'){
+       result='Tie'
+}else if(compueterPick==='Paper'){
+       result='You Winner'
+}else if(compueterPick==='Scissor'){
+       result='You Loooser '
+}
+alert(`You Pickked Rock. Computer picked ${compueterPick}. You ${result}`)
+
+                
+                ">Rock</button>
+            <button onclick="
+            PickComputermove1()
+
+
+  if(compueterPick==='Rock'){
+   result='Wiiner'
+}else if(compueterPick==='Paper'){
+   result='Tie '
+}else if(compueterPick==='Scissor'){
+   result='You Looser '
+}
+alert(`You Pickked Paper. Computer picked ${compueterPick}. You ${result}`)
+            
+            ">Paper</button>
+
+            <button onclick=" PickComputermove1()
+            
+            if(compueterPick==='Rock' )
+            { result='Looser' }
+            else if(compueterPick==='Paper' )
+                { result='You Winner' }
+                else if(compueterPick==='Scissor' ){
+                result=' Tie ' }
+                alert(`You Pickked Scissor. Computer picked ${compueterPick}. You ${result}`)
+
+                 ">Scissor</button>
+        </div>
+    </center>
+    <script>
+        let compueterPick = '';
+        function PickComputermove1() {
+            const RanndomNum = Math.random();
+
+            if (RanndomNum >= 0 && RanndomNum < 1 / 3) {
+                compueterPick = 'Rock'
+            } else if (RanndomNum >= 1 / 3 && RanndomNum < 2 / 3) {
+                compueterPick = 'Paper'
+            } else if (RanndomNum >= 2 / 3 && RanndomNum < 1) {
+                compueterPick = 'Scissor'
+            }
+            return compueterPick
+        } </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Heads Or Tails</title>
+</head>
+
+<body>
+    <center>
+        <h1>Heads Or Tails</h1>
+
+        <button onclick="
+          let RandamNum = Math.random();
+        let Picker = '';
+        
+        if (RandamNum >= 0 && RandamNum <= 1 / 2) {
+            Picker = 'Heads'
+            console.log(`Its Heads`)
+        } else {
+            console.log(`Its Tail`)
+            Picker = 'Tails'
+        }
+        let Result='';
+        let Guess = '';
+        if (Guess === Picker) {
+            Result = 'You Win'
+
+        } else {
+            Result = `You Loose`
+        }
+        alert(`Its Pickked Heads. You picked ${Picker}. You ${Result}`)
+        ">Heads</button>
+        <button onclick="
+         let RandamNum1 = Math.random();
+       let Picker1 = '';
+       
+       if (RandamNum1 >= 0 && RandamNum1 <= 1 / 2) {
+           Picker = 'Heads'
+           console.log(`Its Heads`)
+       } else {
+           console.log(`Its Tail`)
+           Picker1 = 'Tails'
+       }
+       let Result1='';
+       let Guess1 = '';
+       if (Guess1 === Picker1) {
+           Result1 = 'You Win'
+
+       } else {
+           Result1 = `You Loose`
+       }
+       alert(`Its Pickked Tails. You picked ${Picker}. You ${Result1}`)
+       ">Tails</button>
+    </center>
+    <script>
+        /*  let RandamNum = Math.random();
+         let Result = '';
+         if (RandamNum >= 0 && RandamNum <= 1 / 2) {
+             Result = 'Heads'
+             console.log("Its Heads")
+         } else {
+             console.log("Its Tails")
+             Result = 'Tails'
+         }
+         let Guess = '';
+         if (Guess === Result) {
+             Result = 'You Win'
+ 
+         } else {
+             Result = "You Loose"
+         } */
+
+    </script>
+</body>
+
+</html>

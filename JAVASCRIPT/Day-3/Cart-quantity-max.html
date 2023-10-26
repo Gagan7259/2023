@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity Max Display</title>
+</head>
+
+<body>
+    <center>
+        <button onclick="
+            console.log(CartQuantity)
+            ">CartQuantity</button>
+        <button onclick="
+     if(CartQuantity<10){
+    CartQuantity=CartQuantity+1
+        console.log(CartQuantity)
+    }else{
+        alert(`Your Cart Items Are Maxed`)
+    }
+
+        
+        ">Update</button>
+    </center>
+    <script>
+        let CartQuantity = 0; 
+    </script>
+</body>
+
+</html>
