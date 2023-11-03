@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Full functional Example with RPS</title>
+    </head>
+
+    <body>
+        <center>
+            <div>
+                <h1>Functions Using RPS</h1>
+            </div>
+            <button onclick="
+                playGame('Rock')
+                ">Rock</button>
+            <button onclick="
+            playGame('Paper')
+            ">Paper</button>
+            <button
+            onclick="
+            playGame('Scissors')
+            "
+            >Scissors</button>
+        </center>
+
+        <script>
+            function playGame(playerMove) {
+                const picker = PickComputerMove();
+                let result = ''
+
+                if (playerMove === 'Scissors') {
+                    if (picker === 'Rock') {
+                        result = "You Loose";
+                    }
+                    else if (picker === 'Paper') {
+                        result = "You Win";
+                    } else if (picker === 'Scissors') {
+                        result = "Tie";
+                    }
+                }
+                else if (playerMove === 'Paper') {
+                    if (picker === 'Rock') {
+                        result = "You Win";
+                    }
+                    else if (picker === 'Paper') {
+                        result = "Tie ";
+                    } else if (picker === 'Scissors') {
+                        result = "Loose";
+                    }
+                }
+                else if (playerMove === 'Rock') {
+                    if (picker === 'Rock') {
+                        result = "Tie";
+                    }
+                    else if (picker === 'Paper') {
+                        result = "Loose ";
+                    } else if (picker === 'Scissors') {
+                        result = "you Win";
+                    }
+                }
+                alert(`You picked ${playerMove}. Computer Picked${picker}. The Result Is ${result}`)
+            }
+
+            function PickComputerMove() {
+                const RandumNum = Math.random();
+                let picker = ''
+                if (RandumNum >= 0 && RandumNum < 1 / 3) {
+                    picker = 'Rock'
+                } else if (RandumNum >= 1 / 3 && RandumNum < 2 / 3) {
+                    picker = 'Paper'
+                } else if (RandumNum >= 2 / 3 && RandumNum < 1) {
+                    picker = 'Scissors'
+                }
+                return picker;
+            }
+        </script>
+    </body>
+
+    </html>

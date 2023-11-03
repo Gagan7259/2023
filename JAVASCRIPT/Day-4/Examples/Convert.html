@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius To FaranGeit</title>
+</head>
+
+<body>
+    <center>
+        <h1>Converter Caluclater</h1>
+        <button onclick="convertToFahrenheit(25)">Convert to Fahrenheit</button>
+        <button onclick="convertToCelcius(86)">Convert to Celcius</button>
+    </center>
+    <script>
+        /*  function convertToFahrenheit(Celcius) {
+             const Faranheit = (Celcius * 9 / 5) + 32
+             console.log(`Caluclated Faranheit Is ${Faranheit}`)
+             alert(`Caluclated Faranheit Is ${Faranheit}`)
+             return Faranheit;
+         } */
+
+        function convertToCelcius(Fahrenheit) {
+            const Celcius = (Fahrenheit - 32) * (5 / 9)
+            console.log(`Caluclated Celcius Is ${Celcius}`)
+            alert(`Caluclated Celcious Is ${Celcius}`)
+            return Celcius;
+        }
+    </script>
+</body>
+
+</html>

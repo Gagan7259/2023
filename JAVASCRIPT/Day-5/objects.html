@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Objcets</h1>
+    </center>
+    <script>
+        const Product = {
+            name: "Iphone",
+            price: 49000,
+            Model: 2022
+        }
+        console.log(Product)
+        console.log(Product.Model)
+        console.log(Product.name)
+        console.log(Product.price)
+
+        //add New Property
+        Product.newproperty = true
+        console.log(Product)
+
+        //delete exixts property
+        delete Product.newproperty;
+        console.log(Product)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <center>
+            <button onclick="
+                console.log(`Car Total Quantity :${Cardquantity}`)
+                "> Show Quantity
+            </button>
+            <button onclick="
+                CardquantityChange(1)
+                ">
+                +1
+            </button>
+            <button onclick="
+                CardquantityChange(2)
+                ">
+                +2
+            </button>
+            <button onclick="
+                CardquantityChange(3)
+                ">
+                +3
+            </button>
+            <button onclick="
+                CardquantityChange(4)
+                ">
+                +4
+            </button>
+
+            <button onclick="
+                    CardquantityChange(-1)
+                ">
+                -1
+            </button>
+            <button onclick="
+                CardquantityChange(-2)
+                ">
+                -2
+            </button>
+            <button onclick="
+                CardquantityChange(-3)
+                ">
+                -3
+            </button>
+            <button onclick="
+                CardquantityChange(-4)
+                ">
+                -4
+            </button>
+        </center>
+        <script>
+            let Cardquantity = 0;
+            function CardquantityChange(change) {
+                if (Cardquantity + change > 10) {
+                    alert(`Cart Is Full`)
+
+                } else if (Cardquantity + change < 0) {
+                    alert(`Not enough for proceesing Purchase`)
+                }
+                else {
+                    Cardquantity += change;
+                    console.log(`cart Quantity :${Cardquantity}`)
+                }
+
+            }
+        </script>
+    </body>
+
+    </html>
