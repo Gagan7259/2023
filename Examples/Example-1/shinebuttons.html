@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shine Buttons</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn {
+            padding: 8px 10px;
+            width: 200px;
+            height: 50px;
+            border-radius: 0;
+            color: #ffff;
+            font-weight: 700;
+            margin: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn ::before {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent,
+                    #00fffc, transparent,
+                );
+            transform: transaletX(-100%);
+            transition: 0.6s;
+            position: absolute;
+
+        }
+
+        .btn::after {
+            background: transparent;
+            box-shadow: 0 0 20px 5px #00fffc;
+        }
+    </style>
+    <div class="centr">
+
+        <button class="btn">I</button>
+        <button class="btn">Love </button>
+        <button class="btn">Java</button>
+    </div>
+</body>
+
+</html>
