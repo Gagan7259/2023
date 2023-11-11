@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Objcet</title>
+</head>
+
+<body>
+    <center>
+        <h1>Json Objects</h1>
+        //its not support to put functions inside the {}
+    </center>
+    <script>
+        const Data = {
+            "name": "Gagan",
+            "Age": 25,
+            confidential: {
+                "sex": "Male",
+                "village": "Gudisalahalli",
+                "Property": "Bmw ,Benz"
+            },
+            fun: function likes() {
+                console.log("Inside object function")
+            }
+
+        }
+        console.log(JSON.stringify(Data))
+
+        console.log(typeof JSON.stringify(Data))
+
+        const data = JSON.stringify(Data)
+        console.log(JSON.parse(data))
+    </script>
+</body>
+
+</html>

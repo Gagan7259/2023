@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object tutorial</title>
+</head>
+
+<body>
+    <center>
+        <h1>Objects Mastery</h1>
+    </center>
+    <script>
+        const Data = {
+            "name": "Gagan",
+            "Age": 25,
+            confidential: {
+                "sex": "Male",
+                "village": "Gudisalahalli",
+                "Property": "Bmw ,Benz"
+            },
+            fun: function likes() {
+                console.log("Inside object function")
+            }
+
+        }
+        console.log(Data)
+        console.log(Data.confidential.Property)
+        console.log(Data['Age'])
+        console.log(Data.confidential['sex'])
+        Data.fun();
+        console.log(typeof console)
+        console.log(typeof console.log)
+
+    </script>
+</body>
+
+</html>
