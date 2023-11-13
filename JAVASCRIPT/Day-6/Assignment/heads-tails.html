@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Tails Game</title>
+</head>
+<style>
+
+</style>
+<div style="background-color: transparent; 
+                justify-content: center;
+                align-items: center; ">
+    <center style="place-items: center;">
+        <h1>Head And Tails Game</h1>
+        <button onclick="palyGame('Heads')">Heads</button>
+        <button onclick="palyGame('Tails')">Tails</button>
+    </center>
+</div>
+<script>
+    const Score = JSON.parse(localStorage.getItem('Score')) || {
+        wins: 0,
+        loose: 0
+
+    }
+    function palyGame(guess) {
+        const RandonNumber = Math.random();
+        const result = RandonNumber < 0.5 ? "Heads" : "Tails"
+        console.log(guess === result ? "You Winner" : "Oh My God Just Miss")
+
+        if (guess === result) {
+            Score.wins++;
+        } else {
+            Score.loose++
+        }
+        console.log(Score)
+        localStorage.setItem('Score', JSON.stringify(Score))
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>

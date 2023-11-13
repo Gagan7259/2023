@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Hello".length)
+        console.log("gagan kumar_s".toUpperCase())
+        console.log("GAGAN_KUMAR S".toLowerCase())
+        console.log("0".toString())
+        console.log(true.toString())
+        /*  console.log(null.toString())
+         console.log(undefined.toString()) */
+
+        //objects are references
+
+        const object1 = {
+            message: "Hello"
+        }
+
+        const ob2 = object1;
+        ob2.message = "Good job"
+        console.log(ob2)
+
+
+        const ob3 = {
+            message: "Good job"
+        }
+        console.log(ob2 === ob3)
+        console.log(ob2.message == ob3.message)
+
+
+        const ob4 = {
+            message: "Good job",
+            info: "Nothing Bro"
+
+        }
+        const { message, info } = ob4;
+        const msg = ob4.message = "Hey Pora rey"
+        console.log(msg)
+        console.log(ob4)
+        console.log(`Object 4 info is ${info}`)
+
+        const ob5 = {
+            message: "Bad Work",
+            info: "What U want Bro",
+            method: function add(a, b) {
+                console.log("HEY ")
+            }
+
+
+
+        }
+        console.log(ob5.method())
+    </script>
+</body>
+
+</html>

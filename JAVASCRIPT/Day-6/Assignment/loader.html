@@ -1,0 +1,97 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loader Animation</title>
+    </head>
+
+    <body>
+        <style>
+            body {
+                background-image: url(https://as2.ftcdn.net/v2/jpg/06/29/07/41/1000_F_629074113_ifzGQVEjjbtxRImER8XAkRA60iq9ECe8.jpg);
+            }
+
+            .headname {
+                color: #3498db;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 800;
+                animation: hiphop 0.9s linear infinite;
+            }
+            @keyframes hiphop {
+                from{
+                    transform: rotateY(20deg);
+                }
+                t0{
+                    transform: rotateX(10deg);
+                }
+            }
+
+            .loader {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .spinner {
+                width: 50px;
+                height: 50px;
+                border: 5px solid #3498db;
+                border-radius: 50%;
+                animation: spin 2s infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotateX(0deg);
+                    box-shadow: 2px 5px 10px #3498db;
+                    border-style: double;
+
+                }
+
+                10% {
+                    transform: rotateY(60deg);
+                    box-shadow: 2px 5px 10px #3498db;
+                    border-style: dashed;
+
+                }
+
+                30% {
+                    transform: rotateX(1200deg);
+                    box-shadow: 2px 5px 10px #3498db;
+                    border-style: dotted;
+                }
+
+                60% {
+                    transform: rotateY(200deg);
+                    box-shadow: 2px 5px 10px #3498db;
+                    border-style: dashed;
+
+                }
+
+                85% {
+                    transform: rotateX(250deg);
+                    box-shadow: 2px 5px 10px #3498db;
+                    border-style: groove;
+                }
+
+                100% {
+                    transform: rotateY(360deg);
+                    box-shadow: 2px 5px 10px #3498db;
+                }
+            }
+        </style>
+        <center>
+            <h1 class="headname">Loader Animation</h1>
+        </center>
+
+        <div class="loader">
+            <div class="spinner">
+
+            </div>
+        </div>
+    </body>
+
+    </html>
