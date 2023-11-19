@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Amezon Fee Calculater</title>
+    </head>
+
+    <body>
+        <center>
+            <h1>Amezon Fee Calculater</h1>
+            <input class="inpt" placeholder="Cost Of The Order">
+            <p class="total"></p>
+            <button onclick="TotalCost()">calculater</button>
+        </center>
+        <script>
+
+            function TotalCost() {
+                let inputelement = document.querySelector('.inpt');
+                let cost = inputelement.value
+                console.log(cost)
+                if (inputelement < 40) {
+                    cost = cost + 10;
+                    console.log(cost)
+                }
+                document.querySelector('.total').innerHTML = `$${cost}`
+            }
+        </script>
+    </body>
+
+    </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <input class="inpt" type="number" placeholder="Cost Of The Order">
+        <p class="totall"></p>
+        <button onclick="caluclate()" onkeydown="console.log(typing)">Calculate</button>
+    </center>
+    <script>
+
+        function caluclate() {
+            let inpute = document.querySelector('.inpt');
+            let cost = inpute.value;
+
+            if (inpute < 40) {
+                cost = cost + 10;
+                console.log(cost)
+            }
+            document.querySelector('.totall').innerHTML = `$${cost}`
+        }
+    </script>
+</body>
+
+</html>
