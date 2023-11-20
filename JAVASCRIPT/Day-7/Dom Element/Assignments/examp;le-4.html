@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 4</title>
+</head>
+
+<body>
+    <center>
+        <h1>KeyDowN</h1>
+        <p class="pa"> </p>
+        <input type="text" class="inpt" onkeydown="
+         keyHandle()
+            ">
+        <button onclick="
+                        const INPUT = document.querySelector('.inpt');
+                    const VAlue = INPUT.value;
+                    document.querySelector('.pa').innerHTML = `Your Name Is ${VAlue}`
+            ">Submit</button>
+
+    </center>
+    <script>
+        function keyHandle() {
+            if (event.key === 'Enter') {
+                const INPUT = document.querySelector('.inpt');
+                const VAlue = INPUT.value;
+                document.querySelector('.pa').innerHTML = `Your Name Is ${VAlue}`
+            }
+        }
+    </script>
+</body>
+
+</html>

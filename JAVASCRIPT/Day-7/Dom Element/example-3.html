@@ -1,0 +1,34 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example 3</title>
+    </head>
+
+    <body>
+        <center>
+            <h1>Name Display</h1>
+
+
+            <input class="inpt" placeholder="Name" type="text">
+            <button onclick="
+            Display()
+            
+            ">Click</button>
+            <p class="pa"></p>
+        </center>
+        <script>
+
+            function Display() {
+                const INPUT = document.querySelector('.inpt');
+                const VAlue = INPUT.value;
+                document.querySelector('.pa').innerHTML = `Your Name Is ${VAlue}`
+
+            }
+
+        </script>
+    </body>
+
+    </html>
