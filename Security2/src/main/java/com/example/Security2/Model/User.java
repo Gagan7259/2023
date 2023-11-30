@@ -1,59 +1,89 @@
 package com.example.Security2.Model;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
+import java.util.*;
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements UserDetails {
+    @PrePersist
+    protected void onCreate() {
+        this.created_At = new Date(System.currentTimeMillis());
+    }
 
-    public Set<Role> roles = new HashSet<>();
+    @PreUpdate
+    protected void onupdate() {
+        this.updated_At = new Date(System.currentTimeMillis());
+    }
+
     @Id
     private String user_id;
     private String username;
-    private String description;
     private String email;
     private String password;
     private String mobileNum;
-    private Date create_AT;
-    private Date update_AT;
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "User_id"),
+            inverseJoinColumns = @JoinColumn(name = "Role_id"))
+    @ManyToMany
+    @Fetch(value = FetchMode.SELECT)
+    private Set<Role> roles = new HashSet<>();
+    private Date created_At;
+    private Date updated_At;
+
+    public User(String user_id, String password, String username, String email, String mobileNum, Set<Role> roles) {
+        this.roles = roles;
+        this.user_id = email;
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.mobileNum = mobileNum;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
+        roles.stream().forEach(i -> authorities.add(new SimpleGrantedAuthority(i.getName())));
+        return List.of(new SimpleGrantedAuthority(authorities.toString()));
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return password;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return email;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 }
