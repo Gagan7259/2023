@@ -34,11 +34,15 @@ public class User implements UserDetails {
 
     public User(String user_name, String userId, String mobile_number, String email, String password, Set<Role> roles) {
         this.roles = roles;
+        this.userId = email;
+        this.email = email;
         this.password = password;
         this.user_name = user_name;
         this.mobile_number = mobile_number;
-        this.userId = email;
-        this.email=email;
+
+    }
+
+    public <E> User(String number, String gagan, String mail, String pass, HashSet<E> es) {
     }
 
     @PrePersist
