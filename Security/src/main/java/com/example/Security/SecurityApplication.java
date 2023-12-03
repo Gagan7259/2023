@@ -31,9 +31,9 @@ public class SecurityApplication {
     @Bean
     CommandLineRunner run(UserService userService) {
         return args -> {
-            userService.saveRole(new Role(null, "ROLE_USER", "THIS IS USER"));
-            userService.saveRole(new Role(null, "ROLE_ADMIN", "THIS IS ADMIN"));
-            userService.saveRole(new Role(null, "ROLE_MANAGER", "THIS IS MANAGER"));
+            userService.saveRole(new Role(null, "ROLE_USER", "this is user"));
+            userService.saveRole(new Role(null, "ROLE_ADMIN", "this is admin"));
+            userService.saveRole(new Role(null, "ROLE_MANAGER", "this is manager"));
 
 
             userService.saveuser(new User("7259173727", "Gagan", "gagankumars7259@gmail.com", "pass", new HashSet<>()));

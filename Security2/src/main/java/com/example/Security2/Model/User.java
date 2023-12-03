@@ -11,21 +11,12 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.*;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements UserDetails {
-    @PrePersist
-    protected void onCreate() {
-        this.created_At = new Date(System.currentTimeMillis());
-    }
-
-    @PreUpdate
-    protected void onupdate() {
-        this.updated_At = new Date(System.currentTimeMillis());
-    }
-
     @Id
     private String user_id;
     private String username;
@@ -40,14 +31,24 @@ public class User implements UserDetails {
     private Set<Role> roles = new HashSet<>();
     private Date created_At;
     private Date updated_At;
-
-    public User(String user_id, String password, String username, String email, String mobileNum, Set<Role> roles) {
-        this.roles = roles;
+    public User(String mobileNum, String username, String email, String password,  Set<Role> roles) {
         this.user_id = email;
-        this.email = email;
-        this.username = username;
-        this.password = password;
         this.mobileNum = mobileNum;
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.roles = roles;
+
+    }
+
+    @PrePersist
+    protected void onCreate() {
+        this.created_At = new Date(System.currentTimeMillis());
+    }
+
+    @PreUpdate
+    protected void onupdate() {
+        this.updated_At = new Date(System.currentTimeMillis());
     }
 
     @Override
