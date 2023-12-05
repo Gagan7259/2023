@@ -31,19 +31,23 @@ public class Security2Application {
     }
 
 
-   CommandLineRunner run(UserServiceImpl userService){
+   CommandLineRunner run(UserService userService){
         return  args -> {
             userService.saveRole(new Role(null,"ROLE_USER","this is user"));
             userService.saveRole(new Role(null,"ROLE_ADMIN","this is admin"));
+            userService.saveRole(new Role(null,"ROLE_MANAGER","this is manager"));
 
 
             userService.saveuser(new User("7259173727","Gagan","gagan@gmailcom","pass",new HashSet<>()));
             userService.saveuser(new User("6363541623","Manoj","manoj@gmailcom","word",new HashSet<>()));
+            userService.saveuser(new User("6737532826","Sai","sai@gmailcom","sai",new HashSet<>()));
 
 
 
             userService.AddtoUser("gagan@gmailcom","ROLE_USER");
             userService.AddtoUser("manoj@gmailcom","ROLE_ADMIN");
+            userService.AddtoUser("Sai@gmailcom","ROLE_MANAGER");
+
 
         };
     }

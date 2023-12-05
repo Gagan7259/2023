@@ -31,19 +31,14 @@ public class SecurityApplication {
     @Bean
     CommandLineRunner run(UserService userService) {
         return args -> {
-            userService.saveRole(new Role(null, "ROLE_USER", "this is user"));
-            userService.saveRole(new Role(null, "ROLE_ADMIN", "this is admin"));
-            userService.saveRole(new Role(null, "ROLE_MANAGER", "this is manager"));
+            userService.saveRole(new Role(null, "ROLE_USER", "this is User"));
+            userService.saveRole(new Role(null, "ROLE_ADMIN", "this is User"));
 
+            userService.saveuser(new User("735546", "Gagan", "gagan@gmail.com", "pass", new HashSet<>()));
+            userService.saveuser(new User("6483763", "Sai", "sai@gmail.com", "word", new HashSet<>()));
 
-            userService.saveuser(new User("7259173727", "Gagan", "gagankumars7259@gmail.com", "pass", new HashSet<>()));
-            userService.saveuser(new User("7259173098", "Gagan28873", "gagankumars@gmail.com", "pass123", new HashSet<>()));
-            userService.saveuser(new User("7259173456", "Gagan7656", "gagankumars9@gmail.com", "pass4556", new HashSet<>()));
-
-
-            userService.addToUser("gagankumars7259@gmail.com", "ROLE_USER");
-            userService.addToUser("gagankumars@gmail.com", "ROLE_ADMIN");
-            userService.addToUser("gagankumars9@gmail.com", "ROLE_MANAGER");
+            userService.addToUser("gagan@gmail.com", "ROLE_USER");
+            userService.addToUser("sai@gmail.com", "ROLE_ADMIN");
 
         };
     }
