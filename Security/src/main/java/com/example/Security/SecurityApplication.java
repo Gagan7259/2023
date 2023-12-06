@@ -24,7 +24,7 @@ public class SecurityApplication {
     }
 
     @Bean
-    BCryptPasswordEncoder passwordEncoder() {
+    BCryptPasswordEncoder passwordEncoderr() {
         return new BCryptPasswordEncoder();
     }
 
