@@ -1,18 +1,20 @@
-const TodoList = ["Make Diiner", "Vegetables", "Fruits"]
-let todolisthtml = ''
+const TodoList = ["Make Diiner", "Vegetables", "Fruits"];
 RenderTodolist();
 
 
 function RenderTodolist() {
-    for (let i = 0; i < length; i++) {
-        const access = TodoList[i]
-        const html = `<p>${access}</p>`
+    let todolisthtml = ''
+
+    for (let i = 0; i < TodoList.length; i++) {
+        const todo = TodoList[i]
+        const html = `<p>${todo}</p>`;
         todolisthtml += html
         console.log(todolisthtml)
-
     }
+    console.log(todolisthtml)
+    document.querySelector('.js-resulyy').innerHTML = todolisthtml
+
 }
-let shoow = document.querySelector('.show') = todolisthtml;
 
 
 function AddTodo() {
@@ -22,4 +24,6 @@ function AddTodo() {
     TodoList.push(name);
     console.log(TodoList)
     RenderTodolist()
+
+
 }
